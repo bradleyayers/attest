@@ -1,0 +1,17 @@
+language: python
+# python:
+#   - 2.5
+#   - 2.6
+#   - 2.7
+#   - 3.2
+#   - 3.3
+#   - pypy
+matrix:
+  include:
+    # doctest
+    - python: 2.7
+      install:
+        - pip install sphinx -e . --use-mirrors
+      script:
+        - cd docs
+        - sphinx-build -WEab doctest -d doctest/doctrees . tmp/doctest
