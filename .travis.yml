@@ -16,6 +16,7 @@ matrix:
     # docs
     - python: 2.7
       install:
+        - sudo apt-get install libenchant1c2a
         - pip install sphinx sphinxcontrib-spelling\>=1.0 pyenchant -e . --use-mirrors
       script:
         - cd docs
