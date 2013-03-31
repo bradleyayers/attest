@@ -16,7 +16,7 @@ matrix:
     # docs
     - python: 2.7
       install:
-        - pip install sphinx sphinxcontrib-spelling>=1.0 pyenchant -e . --use-mirrors
+        - pip install sphinx sphinxcontrib-spelling\>=1.0 pyenchant -e . --use-mirrors
       script:
         - cd docs
         - sphinx-build -WEab doctest . build/doctest
